@@ -10,11 +10,15 @@
 		2318CDB32513E6AF00ADA69A /* Switchbot WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2318CDB22513E6AF00ADA69A /* Switchbot WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2318CDB82513E6B100ADA69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2318CDB72513E6B100ADA69A /* Assets.xcassets */; };
 		2318CDBF2513E6B100ADA69A /* Switchbot WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2318CDBE2513E6B100ADA69A /* Switchbot WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2318CDC42513E6B100ADA69A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDC32513E6B100ADA69A /* ContentView.swift */; };
 		2318CDC62513E6B100ADA69A /* SwitchbotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDC52513E6B100ADA69A /* SwitchbotApp.swift */; };
 		2318CDC82513E6B100ADA69A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDC72513E6B100ADA69A /* ComplicationController.swift */; };
 		2318CDCA2513E6B200ADA69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2318CDC92513E6B200ADA69A /* Assets.xcassets */; };
 		2318CDCD2513E6B200ADA69A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2318CDCC2513E6B200ADA69A /* Preview Assets.xcassets */; };
+		2318CDE22513E6DF00ADA69A /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDDF2513E6DF00ADA69A /* BluetoothController.swift */; };
+		2318CDE32513E6DF00ADA69A /* SwithcbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDE02513E6DF00ADA69A /* SwithcbotView.swift */; };
+		2318CDE42513E6DF00ADA69A /* Switchbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDE12513E6DF00ADA69A /* Switchbot.swift */; };
+		2318CDFE2514EBD700ADA69A /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CDFD2514EBD700ADA69A /* String+Encoding.swift */; };
+		2318CE072514ED0100ADA69A /* BotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318CE062514ED0100ADA69A /* BotData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +69,16 @@
 		2318CDB72513E6B100ADA69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2318CDB92513E6B100ADA69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2318CDBE2513E6B100ADA69A /* Switchbot WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Switchbot WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2318CDC32513E6B100ADA69A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2318CDC52513E6B100ADA69A /* SwitchbotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchbotApp.swift; sourceTree = "<group>"; };
 		2318CDC72513E6B100ADA69A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		2318CDC92513E6B200ADA69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2318CDCC2513E6B200ADA69A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2318CDCE2513E6B200ADA69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2318CDDF2513E6DF00ADA69A /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		2318CDE02513E6DF00ADA69A /* SwithcbotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwithcbotView.swift; sourceTree = "<group>"; };
+		2318CDE12513E6DF00ADA69A /* Switchbot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switchbot.swift; sourceTree = "<group>"; };
+		2318CDFD2514EBD700ADA69A /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
+		2318CE062514ED0100ADA69A /* BotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,10 @@
 		2318CDC22513E6B100ADA69A /* Switchbot WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2318CDC32513E6B100ADA69A /* ContentView.swift */,
 				2318CDC52513E6B100ADA69A /* SwitchbotApp.swift */,
+				2318CDE02513E6DF00ADA69A /* SwithcbotView.swift */,
 				2318CDC72513E6B100ADA69A /* ComplicationController.swift */,
+				2318CE022514EBE000ADA69A /* Models */,
 				2318CDC92513E6B200ADA69A /* Assets.xcassets */,
 				2318CDCE2513E6B200ADA69A /* Info.plist */,
 				2318CDCB2513E6B200ADA69A /* Preview Content */,
@@ -131,6 +140,17 @@
 				2318CDCC2513E6B200ADA69A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2318CE022514EBE000ADA69A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2318CDDF2513E6DF00ADA69A /* BluetoothController.swift */,
+				2318CDE12513E6DF00ADA69A /* Switchbot.swift */,
+				2318CDFD2514EBD700ADA69A /* String+Encoding.swift */,
+				2318CE062514ED0100ADA69A /* BotData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2318CDC42513E6B100ADA69A /* ContentView.swift in Sources */,
+				2318CDE32513E6DF00ADA69A /* SwithcbotView.swift in Sources */,
+				2318CDFE2514EBD700ADA69A /* String+Encoding.swift in Sources */,
+				2318CDE42513E6DF00ADA69A /* Switchbot.swift in Sources */,
 				2318CDC62513E6B100ADA69A /* SwitchbotApp.swift in Sources */,
+				2318CDE22513E6DF00ADA69A /* BluetoothController.swift in Sources */,
 				2318CDC82513E6B100ADA69A /* ComplicationController.swift in Sources */,
+				2318CE072514ED0100ADA69A /* BotData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +425,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Switchbot WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8T762974VW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Switchbot WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,7 +433,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapptitude.Switchbot.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -424,6 +449,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Switchbot WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8T762974VW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Switchbot WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,7 +457,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapptitude.Switchbot.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -448,9 +474,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8T762974VW;
 				IBSC_MODULE = Switchbot_WatchKit_Extension;
 				INFOPLIST_FILE = "Switchbot WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapptitude.Switchbot.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -467,9 +494,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8T762974VW;
 				IBSC_MODULE = Switchbot_WatchKit_Extension;
 				INFOPLIST_FILE = "Switchbot WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapptitude.Switchbot.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -484,8 +512,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T762974VW;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapptitude.Switchbot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -496,8 +525,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T762974VW;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapptitude.Switchbot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
