@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 @main
 struct SwitchbotApp: App {
@@ -35,11 +36,15 @@ struct SwitchbotApp: App {
                         scanFor(seconds: 10)
                     }.foregroundColor(.blue)
                 }
-            }
+            }.onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification), perform: { _ in
+                scanFor(seconds: 10)
+            }).onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationWillResignActiveNotification), perform: { _ in
+                bluetooth.stopScan()
+            })
         }
     }
     
-    func scanFor(seconds: TimeInterval) {
+    func scanFor(seconds: TimeInterval = 10) {
         bluetooth.scan()
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             bluetooth.stopScan()

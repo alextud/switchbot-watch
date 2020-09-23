@@ -27,5 +27,7 @@
 	</array>
 	<key>WKWatchKitApp</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>To control switchbot device</string>
 </dict>
 </plist>
