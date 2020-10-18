@@ -11,7 +11,8 @@ struct SwithcbotView: View {
     var bot: Switchbot
     var body: some View {
         HStack {
-            Button(bot.name, action: { bot.press() })
+            Button(bot.name, action: bot.press)
+                .disabled(bot.peripheral?.state != .connected)
             Text(" \(bot.rssi)db")
         }
         if bot.isLoading {

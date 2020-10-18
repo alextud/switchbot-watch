@@ -92,7 +92,7 @@ extension BluetoothController: CBPeripheralDelegate {
                 print("found charactestic", item)
                 if let index = bots.firstIndex(where: {$0.peripheral == peripheral}) {
                     var bot = bots[index]
-                    bot.charcterstic = item
+                    bot.characterstic = item
                     bots[index] = bot
                 }
             }

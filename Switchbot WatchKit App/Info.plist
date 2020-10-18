@@ -20,6 +20,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>To control switchbot device</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -27,7 +29,5 @@
 	</array>
 	<key>WKWatchKitApp</key>
 	<true/>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>To control switchbot device</string>
 </dict>
 </plist>

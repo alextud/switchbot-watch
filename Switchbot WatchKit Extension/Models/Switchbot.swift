@@ -18,21 +18,41 @@ struct Switchbot: Hashable {
     
     var peripheral: CBPeripheral?
     var service: CBService!
-    var charcterstic: CBCharacteristic!
+    var characterstic: CBCharacteristic!
     var isLoading = false
     
     func press() {
-        let data = BotData.PRESS_KEY.data(using: .hexadecimal)!
-        peripheral?.writeValue(data, for: charcterstic, type: .withResponse)
+        sendData(BotData.PRESS_KEY.data(using: .hexadecimal)!)
     }
     
     func turnOn() {
         let data = BotData.ON_KEY.data(using: .hexadecimal)!
-        peripheral?.writeValue(data, for: charcterstic, type: .withResponse)
+        peripheral?.writeValue(data, for: characterstic, type: .withResponse)
     }
     
     func turnOff() {
         let data = BotData.OFF_KEY.data(using: .hexadecimal)!
-        peripheral?.writeValue(data, for: charcterstic, type: .withResponse)
+        peripheral?.writeValue(data, for: characterstic, type: .withResponse)
+    }
+    
+    func sendData(_ data: Data) {
+        guard let peripheral = peripheral else {
+            return
+        }
+        
+        switch peripheral.state {
+        case .connected:
+            peripheral.writeValue(data, for: characterstic, type: .withResponse)
+        case .connecting:
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.sendData(data)
+            }
+        case .disconnected:
+            break
+        case .disconnecting:
+            break
+        @unknown default:
+            fatalError()
+        }
     }
 }
