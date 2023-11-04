@@ -22,6 +22,8 @@
 	<string>1</string>
 	<key>CLKComplicationPrincipalClass</key>
 	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>The app needs a bluetooth connection In order to connect to switchbot devices</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
