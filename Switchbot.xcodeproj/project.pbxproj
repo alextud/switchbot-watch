@@ -213,6 +213,9 @@
 		2318CDA82513E6AF00ADA69A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
@@ -425,7 +428,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Switchbot WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 8T762974VW;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Switchbot WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -433,7 +436,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -449,7 +452,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Switchbot WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 8T762974VW;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Switchbot WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,7 +460,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -474,10 +477,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8T762974VW;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				IBSC_MODULE = Switchbot_WatchKit_Extension;
 				INFOPLIST_FILE = "Switchbot WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -494,10 +497,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8T762974VW;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				IBSC_MODULE = Switchbot_WatchKit_Extension;
 				INFOPLIST_FILE = "Switchbot WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -512,9 +515,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8T762974VW;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -525,9 +528,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8T762974VW;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextud.switchbot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
