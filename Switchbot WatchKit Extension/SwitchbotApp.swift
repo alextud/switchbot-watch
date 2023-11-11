@@ -12,6 +12,7 @@ import UIKit
 struct SwitchbotApp: App {
     @ObservedObject var bluetooth = BluetoothController()
     @State private var backgroundStopScanTimer: Timer?
+    @State var lastOpenedDate: Date?
     
     init() {
         scanFor(seconds: 10)
@@ -39,7 +40,12 @@ struct SwitchbotApp: App {
             }.onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification), perform: { _ in
                 self.backgroundStopScanTimer?.invalidate()
                 self.backgroundStopScanTimer = nil
-                scanFor(seconds: 10)
+                
+                // automatic scanning after a period of time,
+                if let lastDate = lastOpenedDate, -lastDate.timeIntervalSinceNow > 5*60 {
+                    scanFor(seconds: 10)
+                }
+                self.lastOpenedDate = Date()
             }).onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationWillResignActiveNotification), perform: { _ in
                 self.backgroundStopScanTimer = Timer.scheduledTimer(withTimeInterval: 15, repeats: false) { _ in
                     bluetooth.stopScan()
