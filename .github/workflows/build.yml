@@ -1,0 +1,30 @@
+name: Build Switchbot WatchKit App
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Select Xcode version
+      run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+      
+    - name: Show Xcode version
+      run: xcodebuild -version
+      
+    - name: Build Switchbot App
+      run: |
+        xcodebuild clean build \
+          -project Switchbot.xcodeproj \
+          -target "Switchbot WatchKit App" \
+          -configuration Release \
+          -sdk watchos \
+          CODE_SIGNING_ALLOWED=NO
