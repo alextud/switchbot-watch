@@ -1,4 +1,4 @@
-name: Build Switchbot WatchKit App
+name: Build and Deploy Switchbot WatchKit App
 
 on:
   push:
@@ -14,17 +14,22 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    #- name: Select Xcode version
-    #  run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
-      
     - name: Show Xcode version
       run: xcodebuild -version
       
-    - name: Build Switchbot App
-      run: |
-        xcodebuild clean build \
-          -project Switchbot.xcodeproj \
-          -target "Switchbot WatchKit App" \
-          -configuration Release \
-          -sdk watchos \
-          CODE_SIGNING_ALLOWED=NO
+    - name: Make script executable
+      run: chmod +x build-and-upload.sh
+      
+    - name: Build and Upload to TestFlight
+      env:
+        APPSTORE_API_KEY_ID: ${{ vars.APPSTORE_API_KEY_ID }}
+        APPSTORE_ISSUER_ID: ${{ vars.APPSTORE_ISSUER_ID }}
+        APPSTORE_API_PRIVATE_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+      run: ./build-and-upload.sh
+      
+    - name: Upload build logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-logs
+        path: build/export_full.log
