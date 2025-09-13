@@ -32,8 +32,23 @@ jobs:
         security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_NAME"
         security list-keychains -d user -s "$KEYCHAIN_NAME" $(security list-keychains -d user | sed 's/"//g')
         security default-keychain -s "$KEYCHAIN_NAME"
+
         # prevent interactive prompts (the usual hang)
-        security set-key-partition-list -S apple-tool:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_NAME"
+        KEYCHAIN_PATH="$HOME/Library/Keychains/${KEYCHAIN_NAME}.keychain-db"
+        # --- Grant partition list on THE SPECIFIC PRIVATE KEY (avoids interactive prompts) ---
+        # Grab the SHA-1 of the Apple Distribution identity (1st match)
+        DIST_SHA=$(security find-identity -p codesigning -v "$KEYCHAIN_PATH" \
+          | awk '/Apple Distribution/ {print $2; exit}')
+
+        # If you prefer to target by label instead:
+        # DIST_LABEL="Apple Distribution: Tapptitude Apps SRL (NF6484JE8F)"
+
+        # Now set the partition list (use SHA so we hit the exact key)
+        security set-key-partition-list -S apple-tool:,apple:,codesign: -s \
+          -k "$BUILD_KEYCHAIN_PASSWORD" -Z "$DIST_SHA" "$KEYCHAIN_PATH"
+
+        # Recheck the key can be accessed non-interactively (no hang expected now)
+        security find-identity -p codesigning -v "$KEYCHAIN_PATH"
 
     - name: Import certificates
       run: |
