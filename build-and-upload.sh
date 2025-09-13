@@ -35,7 +35,7 @@ echo "AUTH_KEY_PATH: $AUTH_KEY_PATH"
 mkdir -p "$EXPORT_PATH"
 echo "📝 Starting archive and export..."
 echo "Logs will be saved to $LOG_PATH"
-echo "Logs will be saved to $ARCHIVE_PATH"
+echo "Archive will be saved to $ARCHIVE_PATH"
 
 # # ------------------------------------------
 # # Archive the WatchKit app

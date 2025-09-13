@@ -47,7 +47,7 @@ jobs:
         APPSTORE_API_KEY_ID: QJNA476PS9 #${{ vars.APPSTORE_API_KEY_ID }}
         APPSTORE_ISSUER_ID: 69a6de80-81b6-47e3-e053-5b8c7c11a4d1 #${{ vars.APPSTORE_ISSUER_ID }}
         APPSTORE_API_PRIVATE_KEY_B64: ${{ secrets.APPSTORE_API_PRIVATE_KEY_B64 }}
-        AUTH_KEY_PATH: "AuthKey_${{ vars.APPSTORE_API_KEY_ID }}.p8"
+        AUTH_KEY_PATH: "$(pwd)/AuthKey_${{ vars.APPSTORE_API_KEY_ID }}.p8"
       run: |
         echo "$APPSTORE_API_PRIVATE_KEY_B64" | base64 -d > AUTH_KEY_PATH
 
