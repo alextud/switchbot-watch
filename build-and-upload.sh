@@ -70,7 +70,8 @@ if [ ${PIPESTATUS[0]} -ne 0 ]; then
 fi
 
 # ------------------------------------------
-# Export IPA using cloud signing
+# Export IPA using cloud signing 
+# & upload directly to TestFlight using xcodebuild by setting destination: upload in ExportOptions.plist
 # ------------------------------------------
 xcodebuild -exportArchive \
   -archivePath "$ARCHIVE_PATH" \
@@ -80,34 +81,6 @@ xcodebuild -exportArchive \
   -authenticationKeyIssuerID "$AUTH_ISSUER_ID" \
   -authenticationKeyPath "$AUTH_KEY_PATH" \
   -allowProvisioningUpdates 2>&1 | tee -a "$LOG_PATH"
-
-if [ ${PIPESTATUS[0]} -eq 0 ]; then
-  echo "✅ IPA exported successfully to $EXPORT_PATH"
-else
-  echo "❌ Failed to export IPA"
-  echo "Check full logs in $LOG_PATH for details"
-  exit 1
-fi
-
-# ------------------------------------------
-# Prepare API key for altool (auto-rename)
-# ------------------------------------------
-echo "🔑 Preparing API key for altool..."
-mkdir -p ~/.appstoreconnect/private_keys
-DEST_KEY_PATH="$HOME/.appstoreconnect/private_keys/AuthKey_${AUTH_KEY_ID}.p8"
-cp -f "$AUTH_KEY_PATH" "$DEST_KEY_PATH"
-
-# ------------------------------------------
-# Upload IPA to TestFlight
-# ------------------------------------------
-IPA_FILE="$EXPORT_PATH/Switchbot.ipa"
-echo "📤 Uploading to TestFlight..."
-xcrun altool --upload-app \
-  -f "$IPA_FILE" \
-  -t ios \
-  --apiKey "$AUTH_KEY_ID" \
-  --apiIssuer "$AUTH_ISSUER_ID" \
-  --verbose 2>&1 | tee -a "$LOG_PATH"
 UPLOAD_STATUS=${PIPESTATUS[0]}
 
 if [ $UPLOAD_STATUS -eq 0 ]; then
