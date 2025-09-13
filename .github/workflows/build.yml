@@ -60,6 +60,7 @@ jobs:
         APPSTORE_API_KEY_ID: ${{ vars.APPSTORE_API_KEY_ID }}
         APPSTORE_ISSUER_ID: ${{ vars.APPSTORE_ISSUER_ID }}
       run: |
+        export CODESIGN_ALLOCATE=$(xcrun -f codesign_allocate)
         export AUTH_KEY_PATH="$(pwd)/AuthKey_${{ vars.APPSTORE_API_KEY_ID }}.p8"
         echo "Path: $AUTH_KEY_PATH"
         echo "${{ secrets.APPSTORE_API_PRIVATE_KEY_B64 }}" | base64 -d > "$AUTH_KEY_PATH"
