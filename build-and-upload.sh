@@ -40,8 +40,12 @@ echo "Archive will be saved to $ARCHIVE_PATH"
 echo "Available code signing identities:"
 security find-identity -p codesigning || true
 
-xcodebuild -showBuildSettings -scheme "Switchbot WatchKit App" -configuration Release \
-| egrep 'CODE_SIGN_STYLE|CODE_SIGN_IDENTITY|DEVELOPMENT_TEAM|PROVISIONING_PROFILE_SPECIFIER' 2>&1 | tee -a "$LOG_PATH"
+# Show what Release will use for each target
+for T in "Switchbot" "Switchbot WatchKit App" "Switchbot WatchKit Extension"; do
+  echo "----- $T (Release) -----"
+  xcodebuild -showBuildSettings -project Switchbot.xcodeproj -target "$T" -configuration Release \
+  | egrep 'CODE_SIGN_STYLE|CODE_SIGN_IDENTITY|DEVELOPMENT_TEAM|PROVISIONING_PROFILE_SPECIFIER' 2>&1 | tee -a "$LOG_PATH"
+done
 
 security find-identity -p codesigning | grep -iq "Apple Distribution" \
   || { echo "❌ Missing Apple Distribution identity in CI keychain"; exit 1; }
