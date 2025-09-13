@@ -13,11 +13,11 @@ LOG_PATH="$IOS_DIR/build/export_full.log"
 # ------------------------------------------
 # App Store Connect API Key info (from environment)
 # ------------------------------------------
-# AUTH_KEY_ID="${APPSTORE_API_KEY_ID}"
-# AUTH_ISSUER_ID="${APPSTORE_ISSUER_ID}"
-AUTH_KEY_ID=QJNA476PS9
-AUTH_ISSUER_ID=69a6de80-81b6-47e3-e053-5b8c7c11a4d1
-AUTH_KEY_PATH="$PROJECT_DIR/AuthKey_${AUTH_KEY_ID}.p8"
+AUTH_KEY_ID="${APPSTORE_API_KEY_ID}"
+AUTH_ISSUER_ID="${APPSTORE_ISSUER_ID}"
+# AUTH_KEY_ID=QJNA476PS9
+# AUTH_ISSUER_ID=69a6de80-81b6-47e3-e053-5b8c7c11a4d1
+# AUTH_KEY_PATH="$PROJECT_DIR/AuthKey_${AUTH_KEY_ID}.p8"
 
 echo "AUTH_KEY_ID: $AUTH_KEY_ID"
 echo "AUTH_ISSUER_ID: $AUTH_ISSUER_ID"

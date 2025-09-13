@@ -16,16 +16,41 @@ jobs:
       
     - name: Show Xcode version
       run: xcodebuild -version
-      
-    - name: Make script executable
-      run: chmod +x build-and-upload.sh
+
+    - name: Prepare keychain
+      run: |
+        KEYCHAIN_NAME=build.keychain-db
+        KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+
+        security delete-keychain "$KEYCHAIN_NAME" 2>/dev/null || true
+        security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_NAME"
+        security set-keychain-settings -lut 3600 "$KEYCHAIN_NAME" # keep keychain open for 1 hour
+        security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_NAME"
+        security list-keychains -d user -s "$KEYCHAIN_NAME" $(security list-keychains -d user | sed 's/"//g')
+        security default-keychain -s "$KEYCHAIN_NAME"
+
+    - name: Import certificates
+      run: |
+        DISTRIBUTION_CERTIFICATE_B64: ${{ secrets.DISTRIBUTION_CERTIFICATE_B64 }}
+        P12_CERT_PASSWORD: ${{ secrets.P12_CERT_PASSWORD }}
+        PROVISIONING_PROFILE_B64: ${{ secrets.PROVISIONING_PROFILE_B64 }}
+
+        echo "$DISTRIBUTION_CERTIFICATE_B64" | base64 -d > distribution.p12
+        echo "$P12_CERT_PASSWORD" | security import distribution.p12 -k "$KEYCHAIN_NAME" -P "$P12_CERT_PASSWORD" -T /usr/bin/codesign
+        echo "$PROVISIONING_PROFILE_B64" | base64 -d > provisioning.mobileprovision
+        security import provisioning.mobileprovision -k "$KEYCHAIN_NAME" -T /usr/bin/codesign
       
     - name: Build and Upload to TestFlight
       env:
-        APPSTORE_API_KEY_ID: ${{ vars.APPSTORE_API_KEY_ID }}
-        APPSTORE_ISSUER_ID: ${{ vars.APPSTORE_ISSUER_ID }}
-        APPSTORE_API_PRIVATE_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-      run: ./build-and-upload.sh
+        APPSTORE_API_KEY_ID: QJNA476PS9 #${{ vars.APPSTORE_API_KEY_ID }}
+        APPSTORE_ISSUER_ID: 69a6de80-81b6-47e3-e053-5b8c7c11a4d1 #${{ vars.APPSTORE_ISSUER_ID }}
+        APPSTORE_API_PRIVATE_KEY_B64: ${{ secrets.APPSTORE_API_PRIVATE_KEY_B64 }}
+        AUTH_KEY_PATH: "AuthKey_${{ vars.APPSTORE_API_KEY_ID }}.p8"
+      run: |
+        echo "$APPSTORE_API_PRIVATE_KEY_B64" | base64 -d > AUTH_KEY_PATH
+
+        chmod +x build-and-upload.sh
+        ./build-and-upload.sh
       
     - name: Upload build logs
       if: always()
@@ -33,3 +58,8 @@ jobs:
       with:
         name: build-logs
         path: build/export_full.log
+
+    - name: Clean up
+      run: |
+        security delete-keychain "$KEYCHAIN_NAME"
+        rm -rf distribution.p12 provisioning.mobileprovision
