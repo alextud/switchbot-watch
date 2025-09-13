@@ -6,5 +6,7 @@
   <key>signingStyle</key><string>automatic</string>
   <key>uploadSymbols</key><true/>
   <key>teamID</key><string>NF6484JE8F</string>
+  <key>destination</key>
+  <string>upload</string>
 </dict>
 </plist>
