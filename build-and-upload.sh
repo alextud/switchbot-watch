@@ -43,6 +43,9 @@ security find-identity -p codesigning || true
 xcodebuild -showBuildSettings -scheme "Switchbot WatchKit App" -configuration Release \
 | egrep 'CODE_SIGN_STYLE|CODE_SIGN_IDENTITY|DEVELOPMENT_TEAM|PROVISIONING_PROFILE_SPECIFIER' 2>&1 | tee -a "$LOG_PATH"
 
+security find-identity -p codesigning | grep -iq "Apple Distribution" \
+  || { echo "❌ Missing Apple Distribution identity in CI keychain"; exit 1; }
+
 # # ------------------------------------------
 # # Archive the WatchKit app
 # # ------------------------------------------
