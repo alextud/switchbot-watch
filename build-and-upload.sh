@@ -37,6 +37,9 @@ echo "📝 Starting archive and export..."
 echo "Logs will be saved to $LOG_PATH"
 echo "Archive will be saved to $ARCHIVE_PATH"
 
+echo "Available code signing identities:"
+security find-identity -p codesigning || true
+
 # # ------------------------------------------
 # # Archive the WatchKit app
 # # ------------------------------------------
