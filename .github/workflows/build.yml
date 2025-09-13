@@ -9,7 +9,10 @@ on:
 jobs:
   build:
     runs-on: macos-14
-    
+
+    env:
+      KEYCHAIN_NAME: build.keychain-db
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -19,7 +22,6 @@ jobs:
 
     - name: Prepare keychain
       run: |
-        KEYCHAIN_NAME=build.keychain-db
         KEYCHAIN_PASSWORD=${{ secrets.KEYCHAIN_PASSWORD }}
 
         security delete-keychain "$KEYCHAIN_NAME" 2>/dev/null || true
