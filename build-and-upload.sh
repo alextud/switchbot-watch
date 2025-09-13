@@ -102,25 +102,13 @@ cp -f "$AUTH_KEY_PATH" "$DEST_KEY_PATH"
 # ------------------------------------------
 IPA_FILE="$EXPORT_PATH/Switchbot.ipa"
 echo "📤 Uploading to TestFlight..."
-
-if xcrun --find upload-app >/dev/null 2>&1; then
-  echo "➡️ Using upload-app"
-  xcrun upload-app \
-    -f "$IPA_FILE" \
-    -t ios \
-    --apiKey "$AUTH_KEY_ID" \
-    --apiIssuer "$AUTH_ISSUER_ID" 2>&1 | tee -a "$LOG_PATH"
-  UPLOAD_STATUS=${PIPESTATUS[0]}
-else
-  echo "⚠️ upload-app not found, falling back to altool"
-  xcrun altool --upload-app \
-    -f "$IPA_FILE" \
-    -t ios \
-    --apiKey "$AUTH_KEY_ID" \
-    --apiIssuer "$AUTH_ISSUER_ID" \
-    --verbose 2>&1 | tee -a "$LOG_PATH"
-  UPLOAD_STATUS=${PIPESTATUS[0]}
-fi
+xcrun altool --upload-app \
+  -f "$IPA_FILE" \
+  -t ios \
+  --apiKey "$AUTH_KEY_ID" \
+  --apiIssuer "$AUTH_ISSUER_ID" \
+  --verbose 2>&1 | tee -a "$LOG_PATH"
+UPLOAD_STATUS=${PIPESTATUS[0]}
 
 if [ $UPLOAD_STATUS -eq 0 ]; then
   echo "🚀 Upload successful! Check TestFlight in App Store Connect."
