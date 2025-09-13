@@ -56,6 +56,8 @@ xcodebuild -project "$IOS_DIR/Switchbot.xcodeproj" \
            -archivePath "$ARCHIVE_PATH" \
            CODE_SIGN_STYLE=Automatic \
            CODE_SIGN_IDENTITY="Apple Distribution" \
+           DEVELOPMENT_TEAM=NF6484JE8F \
+           PROVISIONING_PROFILE_SPECIFIER="" \
            -authenticationKeyID "$AUTH_KEY_ID" \
            -authenticationKeyIssuerID "$AUTH_ISSUER_ID" \
            -authenticationKeyPath "$AUTH_KEY_PATH" \
