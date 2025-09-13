@@ -43,11 +43,12 @@ jobs:
 
     - name: Import provisioning profile
       run: |
-        PROV_PROFILE_PATH=~/Library/MobileDevice/Provisioning\ Profiles
-        mkdir -p $PROV_PROFILE_PATH
-        echo "${{ secrets.SWITCHBOTAPPMOBILEPROVISION }}" | base64 -d > $PROV_PROFILE_PATH/SWITCHBOTAPPMOBILEPROVISION.mobileprovision
-        echo "${{ secrets.SWITCHBOTWATCHKITEXTENSIONMOBILEPROVISION }}" | base64 -d > $PROV_PROFILE_PATH/SWITCHBOTWATCHKITEXTENSIONMOBILEPROVISION.mobileprovision
-        echo "${{ secrets.SWITCHBOTWATCHKITMOBILEPROVISION }}" | base64 -d > $PROV_PROFILE_PATH/SWITCHBOTWATCHKITMOBILEPROVISION.mobileprovision
+        PROV_PROFILE_PATH="$HOME/Library/MobileDevice/Provisioning Profiles"
+        mkdir -p "$PROV_PROFILE_PATH"
+        echo "${{ secrets.SWITCHBOTAPPMOBILEPROVISION }}" | base64 -d > "$PROV_PROFILE_PATH/SWITCHBOTAPPMOBILEPROVISION.mobileprovision"
+        echo "${{ secrets.SWITCHBOTWATCHKITEXTENSIONMOBILEPROVISION }}" | base64 -d > "$PROV_PROFILE_PATH/SWITCHBOTWATCHKITEXTENSIONMOBILEPROVISION.mobileprovision"
+        echo "${{ secrets.SWITCHBOTWATCHKITMOBILEPROVISION }}" | base64 -d > "$PROV_PROFILE_PATH/SWITCHBOTWATCHKITMOBILEPROVISION.mobileprovision"
+      
       
     - name: Build and Upload to TestFlight
       env:
