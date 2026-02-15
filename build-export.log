@@ -1,0 +1,5 @@
+2026-02-15 14:35:49.331 xcodebuild[88794:1966939] [MT] IDEDistribution: -[IDEDistributionLogging _createLoggingBundleAtPath:]: Created bundle at path "/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/Switchbot WatchKit App_2026-02-15_14-35-49.322.xcdistributionlogs".
+2026-02-15 14:35:49.385 xcodebuild[88794:1966939] [MT] IDEDistribution: Command line name "development" is deprecated. Use "debugging" instead.
+Exported Switchbot WatchKit App to: /Users/alextud/projects/switchbot-watch/build/ipa
+** EXPORT SUCCEEDED **
+

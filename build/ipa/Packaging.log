@@ -1,0 +1,202 @@
+2026-02-15 12:36:01 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x127c5af00; archive(resolved)="<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team(resolved)="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	Chain (14, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x127c5af00; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionProcessingPipelineContext: 0x151627820; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x127c3bca0; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x151737e40; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x15173aaa0; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x127c59d80; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x15164e170; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x15172e140; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x127c4dc10; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="<IDEProvisioningBasicTeam: 0x600000514ea0; teamID='NF6484JE8F', teamName='(null)'>">
+	<IDEDistributionContext: 0x127c4da00; archive = "<IDEArchiveWatchOnlyAppContainer: 0x600002bbb600>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="(null)">
+	<IDEDistributionContext: 0x127c4d0b0; archive = "<IDEArchive: 0x600002f0a140>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="(null)">
+	<IDEDistributionContext: 0x151726090; archive = "<IDEArchive: 0x600002f0a140>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="(null)">
+	<IDEDistributionContext: 0x151720ac0; archive = "<IDEArchive: 0x600002f0a140>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000006c5970>", team="(null)">
+	<IDEDistributionContext: 0x127c2c1b0; archive = "<IDEArchive: 0x600002f0a140>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x127c5af00>
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2026-02-15 12:36:01 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app' '/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app'
+2026-02-15 12:36:01 +0000  >>> Copying /Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app 
+2026-02-15 12:36:01 +0000  copying file ./_CodeSignature/CodeResources ... 
+2026-02-15 12:36:01 +0000  4307 bytes for ./_CodeSignature/CodeResources
+2026-02-15 12:36:01 +0000  copying file ./PlugIns/Switchbot WatchKit Extension.appex/_CodeSignature/CodeResources ... 
+2026-02-15 12:36:01 +0000  2112 bytes for ./PlugIns/Switchbot WatchKit Extension.appex/_CodeSignature/CodeResources
+2026-02-15 12:36:01 +0000  copying file ./PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension ... 
+2026-02-15 12:36:01 +0000  1322016 bytes for ./PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension
+2026-02-15 12:36:01 +0000  copying file ./PlugIns/Switchbot WatchKit Extension.appex/embedded.mobileprovision ... 
+2026-02-15 12:36:01 +0000  38516 bytes for ./PlugIns/Switchbot WatchKit Extension.appex/embedded.mobileprovision
+2026-02-15 12:36:01 +0000  copying file ./PlugIns/Switchbot WatchKit Extension.appex/Info.plist ... 
+2026-02-15 12:36:01 +0000  1174 bytes for ./PlugIns/Switchbot WatchKit Extension.appex/Info.plist
+2026-02-15 12:36:01 +0000  copying file ./Assets.car ... 
+2026-02-15 12:36:01 +0000  90200 bytes for ./Assets.car
+2026-02-15 12:36:01 +0000  copying file ./_WatchKitStub/WK ... 
+2026-02-15 12:36:01 +0000  199392 bytes for ./_WatchKitStub/WK
+2026-02-15 12:36:01 +0000  copying file ./embedded.mobileprovision ... 
+2026-02-15 12:36:01 +0000  38386 bytes for ./embedded.mobileprovision
+2026-02-15 12:36:01 +0000  copying file ./Info.plist ... 
+2026-02-15 12:36:01 +0000  975 bytes for ./Info.plist
+2026-02-15 12:36:01 +0000  copying file ./Switchbot WatchKit App ... 
+2026-02-15 12:36:01 +0000  200432 bytes for ./Switchbot WatchKit App
+2026-02-15 12:36:01 +0000  copying file ./PkgInfo ... 
+2026-02-15 12:36:01 +0000  8 bytes for ./PkgInfo
+2026-02-15 12:36:01 +0000 [MT] /usr/bin/ditto exited with 0
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2026-02-15 12:36:01 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000020e88a0; bundleID='(null)', path='<DVTFilePath:0x6000020150e0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/_WatchKitStub/WK'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200dc20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac840; name='Software Signing', hash='EFDBC9139DD98DBAE5A9C7165A096511B15EAEF9', serialNumber='64EFEAFEC239E8A5', certificateKinds='(
+), issueDate='2020-10-29 18:32:38 +0000''>', entitlements='(null)', teamID='(null)', identifier='com.apple.WK', executablePath='<DVTFilePath:0x6000020150e0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/_WatchKitStub/WK'>', hardenedRuntime='0'>'>
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2026-02-15 12:36:01 +0000 [MT] Archs to thin for item /Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex are []
+2026-02-15 12:36:01 +0000 [MT] Archs to thin for item /Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/_WatchKitStub/WK are []
+2026-02-15 12:36:01 +0000 [MT] Archs to thin for item /Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app are []
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionODRStep
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2026-02-15 12:36:01 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-02-15 12:36:01 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-02-15 12:36:01 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2026-02-15 12:36:01 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002012b20; bundleID='com.tapp1.switchbot.watchkitapp.watchkitextension', path='<DVTFilePath:0x60000358f020:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200c8a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac780; name='Apple Development: Alexandru Tudose (49M5Z6D88M)', hash='5DD280F8354A65195695438833BA0C2411AE0766', serialNumber='3A0F5AB1D705BCE215DA51D56DCD0435', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-02-15 12:21:52 +0000''>', entitlements='{
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}', teamID='NF6484JE8F', identifier='com.tapp1.switchbot.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x6000036825b0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}
+2026-02-15 12:36:01 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-02-15 12:36:01 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002012b20; bundleID='com.tapp1.switchbot.watchkitapp.watchkitextension', path='<DVTFilePath:0x60000358f020:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200c8a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac840; name='Apple Development: Alexandru Tudose (49M5Z6D88M)', hash='5DD280F8354A65195695438833BA0C2411AE0766', serialNumber='3A0F5AB1D705BCE215DA51D56DCD0435', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-02-15 12:21:52 +0000''>', entitlements='{
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}', teamID='NF6484JE8F', identifier='com.tapp1.switchbot.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x6000036825b0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}
+2026-02-15 12:36:01 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002012b20; bundleID='com.tapp1.switchbot.watchkitapp.watchkitextension', path='<DVTFilePath:0x60000358f020:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200c8a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac840; name='Apple Development: Alexandru Tudose (49M5Z6D88M)', hash='5DD280F8354A65195695438833BA0C2411AE0766', serialNumber='3A0F5AB1D705BCE215DA51D56DCD0435', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-02-15 12:21:52 +0000''>', entitlements='{
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}', teamID='NF6484JE8F', identifier='com.tapp1.switchbot.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x6000036825b0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension'>', hardenedRuntime='0'>'> to: /var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/entitlements~~~WQz25p
+2026-02-15 12:36:01 +0000 [MT] invoking codesign: <NSConcreteTask: 0x6000024b3110; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    5DD280F8354A65195695438833BA0C2411AE0766,
+    "--entitlements",
+    "/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/entitlements~~~WQz25p",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex"
+)'>
+2026-02-15 12:36:01 +0000 [MT] codesign output: /var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex: replacing existing signature
+/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex: signed bundle with Mach-O universal (armv7k arm64 arm64_32) [com.tapp1.switchbot.watchkitapp.watchkitextension]
+2026-02-15 12:36:01 +0000 [MT] Skipping signing of item: <IDEDistributionItem: 0x6000020e88a0; bundleID='(null)', path='<DVTFilePath:0x6000020150e0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/_WatchKitStub/WK'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200dc20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac780; name='Software Signing', hash='EFDBC9139DD98DBAE5A9C7165A096511B15EAEF9', serialNumber='64EFEAFEC239E8A5', certificateKinds='(
+), issueDate='2020-10-29 18:32:38 +0000''>', entitlements='(null)', teamID='(null)', identifier='com.apple.WK', executablePath='<DVTFilePath:0x6000020150e0:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/_WatchKitStub/WK'>', hardenedRuntime='0'>'>
+2026-02-15 12:36:01 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002013840; bundleID='com.tapp1.switchbot.watchkitapp', path='<DVTFilePath:0x600003682520:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200dfe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac840; name='Apple Development: Alexandru Tudose (49M5Z6D88M)', hash='5DD280F8354A65195695438833BA0C2411AE0766', serialNumber='3A0F5AB1D705BCE215DA51D56DCD0435', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-02-15 12:21:52 +0000''>', entitlements='{
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}', teamID='NF6484JE8F', identifier='com.tapp1.switchbot.watchkitapp', executablePath='<DVTFilePath:0x600003682490:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/Switchbot WatchKit App'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}
+2026-02-15 12:36:01 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-02-15 12:36:01 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002013840; bundleID='com.tapp1.switchbot.watchkitapp', path='<DVTFilePath:0x600003682520:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200dfe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac3c0; name='Apple Development: Alexandru Tudose (49M5Z6D88M)', hash='5DD280F8354A65195695438833BA0C2411AE0766', serialNumber='3A0F5AB1D705BCE215DA51D56DCD0435', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-02-15 12:21:52 +0000''>', entitlements='{
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}', teamID='NF6484JE8F', identifier='com.tapp1.switchbot.watchkitapp', executablePath='<DVTFilePath:0x600003682490:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/Switchbot WatchKit App'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}
+2026-02-15 12:36:01 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002013840; bundleID='com.tapp1.switchbot.watchkitapp', path='<DVTFilePath:0x600003682520:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60000200dfe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000031ac3c0; name='Apple Development: Alexandru Tudose (49M5Z6D88M)', hash='5DD280F8354A65195695438833BA0C2411AE0766', serialNumber='3A0F5AB1D705BCE215DA51D56DCD0435', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-02-15 12:21:52 +0000''>', entitlements='{
+    "application-identifier" = "NF6484JE8F.com.tapp1.switchbot.watchkitapp";
+    "com.apple.developer.team-identifier" = NF6484JE8F;
+    "get-task-allow" = 1;
+}', teamID='NF6484JE8F', identifier='com.tapp1.switchbot.watchkitapp', executablePath='<DVTFilePath:0x600003682490:'/Users/alextud/projects/switchbot-watch/build/Switchbot.xcarchive/Products/Applications/Switchbot.app/Watch/Switchbot WatchKit App.app/Switchbot WatchKit App'>', hardenedRuntime='0'>'> to: /var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/entitlements~~~vDA2eS
+2026-02-15 12:36:01 +0000 [MT] invoking codesign: <NSConcreteTask: 0x6000024b3020; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    5DD280F8354A65195695438833BA0C2411AE0766,
+    "--entitlements",
+    "/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/entitlements~~~vDA2eS",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app"
+)'>
+2026-02-15 12:36:01 +0000 [MT] codesign output: /var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app: replacing existing signature
+/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app: signed app bundle with Mach-O universal (armv7k arm64 arm64_32) [com.tapp1.switchbot.watchkitapp]
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2026-02-15 12:36:01 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root' '/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Packages/Switchbot WatchKit App.ipa'
+2026-02-15 12:36:01 +0000  >>> Copying /var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root 
+2026-02-15 12:36:01 +0000  copying file ./Payload/Switchbot WatchKit App.app/_CodeSignature/CodeResources ... 
+2026-02-15 12:36:01 +0000  4307 bytes for ./Payload/Switchbot WatchKit App.app/_CodeSignature/CodeResources
+2026-02-15 12:36:01 +0000  copying file ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/_CodeSignature/CodeResources ... 
+2026-02-15 12:36:01 +0000  2112 bytes for ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/_CodeSignature/CodeResources
+2026-02-15 12:36:01 +0000  copying file ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension ... 
+2026-02-15 12:36:01 +0000  1322016 bytes for ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Switchbot WatchKit Extension
+copying file ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/embedded.mobileprovision ... 
+2026-02-15 12:36:01 +0000  38516 bytes for ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/embedded.mobileprovision
+copying file ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Info.plist ... 
+2026-02-15 12:36:01 +0000  1174 bytes for ./Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex/Info.plist
+copying file ./Payload/Switchbot WatchKit App.app/Assets.car ... 
+2026-02-15 12:36:01 +0000  90200 bytes for ./Payload/Switchbot WatchKit App.app/Assets.car
+2026-02-15 12:36:01 +0000  copying file ./Payload/Switchbot WatchKit App.app/_WatchKitStub/WK ... 
+2026-02-15 12:36:01 +0000  199392 bytes for ./Payload/Switchbot WatchKit App.app/_WatchKitStub/WK
+copying file ./Payload/Switchbot WatchKit App.app/embedded.mobileprovision ... 
+2026-02-15 12:36:01 +0000  38386 bytes for ./Payload/Switchbot WatchKit App.app/embedded.mobileprovision
+2026-02-15 12:36:01 +0000  copying file ./Payload/Switchbot WatchKit App.app/Info.plist ... 
+975 bytes for ./Payload/Switchbot WatchKit App.app/Info.plist
+2026-02-15 12:36:01 +0000  copying file ./Payload/Switchbot WatchKit App.app/Switchbot WatchKit App ... 
+2026-02-15 12:36:01 +0000  200432 bytes for ./Payload/Switchbot WatchKit App.app/Switchbot WatchKit App
+copying file ./Payload/Switchbot WatchKit App.app/PkgInfo ... 
+2026-02-15 12:36:01 +0000  8 bytes for ./Payload/Switchbot WatchKit App.app/PkgInfo
+2026-02-15 12:36:01 +0000 [MT] /usr/bin/ditto exited with 0
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2026-02-15 12:36:01 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2026-02-15 12:36:01 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2026-02-15 12:36:02 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000035b30c0:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/PlugIns/Switchbot WatchKit Extension.appex'>
+2026-02-15 12:36:02 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x60000204bf00:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/_WatchKitStub/WK'>
+2026-02-15 12:36:02 +0000 [MT] [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x60000204bf00:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/_WatchKitStub/WK'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x60000204bf00:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/_WatchKitStub/WK'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x60000204bf00:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/_WatchKitStub/WK'>}
+2026-02-15 12:36:02 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x60000204bf00:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app/_WatchKitStub/WK'>
+2026-02-15 12:36:02 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000036a5f80:'/var/folders/0x/cj0dn4550d381lbs419sfpg40000gn/T/XcodeDistPipeline.~~~WEpVGe/Root/Payload/Switchbot WatchKit App.app'>
+2026-02-15 12:36:02 +0000 [MT] Processing step: IDEDistributionCreateManifestStep

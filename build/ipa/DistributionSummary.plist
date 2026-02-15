@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Switchbot WatchKit App.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64_32</string>
+				<string>armv7k</string>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>5DD280F8354A65195695438833BA0C2411AE0766</string>
+				<key>dateExpires</key>
+				<string>15.02.2027</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7k</string>
+						<string>arm64_32</string>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>5DD280F8354A65195695438833BA0C2411AE0766</string>
+						<key>dateExpires</key>
+						<string>15.02.2027</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>entitlements</key>
+					<dict>
+						<key>application-identifier</key>
+						<string>NF6484JE8F.com.tapp1.switchbot.watchkitapp.watchkitextension</string>
+						<key>com.apple.developer.team-identifier</key>
+						<string>NF6484JE8F</string>
+						<key>get-task-allow</key>
+						<true/>
+					</dict>
+					<key>name</key>
+					<string>Switchbot WatchKit Extension.appex</string>
+					<key>profile</key>
+					<dict>
+						<key>UUID</key>
+						<string>7de30200-66ce-46de-807e-2927fe0a3778</string>
+						<key>dateExpires</key>
+						<string>15.02.2027</string>
+						<key>name</key>
+						<string>iOS Team Provisioning Profile: com.tapp1.switchbot.watchkitapp.watchkitextension</string>
+					</dict>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>NF6484JE8F</string>
+						<key>name</key>
+						<string></string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>NF6484JE8F.com.tapp1.switchbot.watchkitapp</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>NF6484JE8F</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Switchbot WatchKit App.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>376259e0-8382-4888-830a-b1131388c0db</string>
+				<key>dateExpires</key>
+				<string>15.02.2027</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.tapp1.switchbot.watchkitapp</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>NF6484JE8F</string>
+				<key>name</key>
+				<string></string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

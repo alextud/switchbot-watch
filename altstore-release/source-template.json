@@ -1,0 +1,30 @@
+{
+  "name": "SwitchBot Watch",
+  "identifier": "com.alextud.switchbot-watch.source",
+  "sourceIcon": "https://raw.githubusercontent.com/alextud/switchbot-watch/main/icon.png",
+  "apps": [
+    {
+      "name": "SwitchBot Watch",
+      "bundleIdentifier": "com.alextud.switchbot",
+      "version": "1.0.0",
+      "versionDate": "2026-02-15",
+      "versionDescription": "Simple Apple Watch app to control SwitchBot devices via Bluetooth. Tap to trigger bot actions.",
+      "downloadURL": "https://YOUR_HOST_URL/switchbot-watch/releases/Switchbot.ipa",
+      "localizedDescription": "Control your SwitchBot devices directly from your Apple Watch. Scan for nearby bots and trigger actions with a tap.",
+      "iconURL": "https://raw.githubusercontent.com/alextud/switchbot-watch/main/icon.png",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/alextud/switchbot-watch/main/screenshot1.png"
+      ],
+      "permissions": [
+        {
+          "type": "bluetooth",
+          "usageDescription": "Required to communicate with SwitchBot devices"
+        }
+      ],
+      "developer": {
+        "name": "Alex Tud",
+        "email": "your-email@example.com"
+      }
+    }
+  ]
+}
