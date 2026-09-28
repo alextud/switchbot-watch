@@ -37,8 +37,9 @@ for T in "Switchbot" "Switchbot WatchKit App"; do
   | egrep 'CODE_SIGN_STYLE|CODE_SIGN_IDENTITY|DEVELOPMENT_TEAM|PROVISIONING_PROFILE_SPECIFIER' 2>&1 | tee -a "$LOG_PATH"
 done
 
-security find-identity -p codesigning | grep -iq "Apple Distribution" \
-  || { echo "❌ Missing Apple Distribution identity in CI keychain"; exit 1; }
+if ! security find-identity -p codesigning -v | grep -iq "Apple Distribution"; then
+  echo "No valid local Apple Distribution identity; export will request cloud signing."
+fi
 
 # # ------------------------------------------
 # # Archive the WatchKit app
