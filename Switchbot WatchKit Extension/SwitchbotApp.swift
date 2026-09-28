@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 @main
 struct SwitchbotApp: App {
@@ -37,7 +36,7 @@ struct SwitchbotApp: App {
                 if !bluetooth.isLoading && bluetooth.bots.count == 0 {
                     Text("No bots found")
                 }
-            }.onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification), perform: { _ in
+            }.onReceive(NotificationCenter.default.publisher(for: WKApplication.didBecomeActiveNotification), perform: { _ in
                 self.backgroundStopScanTimer?.invalidate()
                 self.backgroundStopScanTimer = nil
                 
@@ -46,7 +45,7 @@ struct SwitchbotApp: App {
                     scanFor(seconds: 10)
                 }
                 self.lastOpenedDate = Date()
-            }).onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationWillResignActiveNotification), perform: { _ in
+            }).onReceive(NotificationCenter.default.publisher(for: WKApplication.willResignActiveNotification), perform: { _ in
                 self.backgroundStopScanTimer = Timer.scheduledTimer(withTimeInterval: 15, repeats: false) { _ in
                     bluetooth.stopScan()
                 }

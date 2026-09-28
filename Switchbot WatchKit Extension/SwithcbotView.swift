@@ -12,7 +12,7 @@ struct SwithcbotView: View {
     var body: some View {
         HStack {
             Button(bot.name, action: bot.press)
-                .disabled(bot.peripheral?.state != .connected)
+                .disabled(bot.peripheral?.state != .connected || bot.characterstic == nil)
             Text(" \(bot.rssi)db")
         }
         if bot.isLoading {

@@ -177,18 +177,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2318CDD52513E6B200ADA69A /* Build configuration list for PBXNativeTarget "Switchbot WatchKit App" */;
 			buildPhases = (
+				2318CDBA2513E6B100ADA69A /* Sources */,
 				2318CDB02513E6AF00ADA69A /* Resources */,
-				2318CDD42513E6B200ADA69A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2318CDC12513E6B100ADA69A /* PBXTargetDependency */,
 			);
 			name = "Switchbot WatchKit App";
 			productName = "Switchbot WatchKit App";
 			productReference = 2318CDB22513E6AF00ADA69A /* Switchbot WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
+			productType = "com.apple.product-type.application";
 		};
 		2318CDBD2513E6B100ADA69A /* Switchbot WatchKit Extension */ = {
 			isa = PBXNativeTarget;
@@ -245,7 +244,6 @@
 			targets = (
 				2318CDAD2513E6AF00ADA69A /* Switchbot */,
 				2318CDB12513E6AF00ADA69A /* Switchbot WatchKit App */,
-				2318CDBD2513E6B100ADA69A /* Switchbot WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -287,7 +285,6 @@
 				2318CDE42513E6DF00ADA69A /* Switchbot.swift in Sources */,
 				2318CDC62513E6B100ADA69A /* SwitchbotApp.swift in Sources */,
 				2318CDE22513E6DF00ADA69A /* BluetoothController.swift in Sources */,
-				2318CDC82513E6B100ADA69A /* ComplicationController.swift in Sources */,
 				2318CE072514ED0100ADA69A /* BotData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +443,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.6;
 			};
 			name = Debug;
 		};
@@ -475,7 +472,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.6;
 			};
 			name = Release;
 		};
@@ -487,6 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF6484JE8F;
 				IBSC_MODULE = Switchbot_WatchKit_Extension;
 				INFOPLIST_FILE = "Switchbot WatchKit App/Info.plist";
@@ -497,7 +495,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Debug;
 		};
@@ -508,21 +506,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=watchos*]" = NF6484JE8F;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				IBSC_MODULE = Switchbot_WatchKit_Extension;
 				INFOPLIST_FILE = "Switchbot WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "SwitchBot-watchkit";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Release;
 		};
@@ -545,16 +541,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NF6484JE8F;
+				DEVELOPMENT_TEAM = NF6484JE8F;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapp1.switchbot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SwitchBot-app";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

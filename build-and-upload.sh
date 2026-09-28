@@ -13,21 +13,11 @@ LOG_PATH="$IOS_DIR/build/export_full.log"
 # ------------------------------------------
 # App Store Connect API Key info (from environment)
 # ------------------------------------------
-# AUTH_KEY_ID="${APPSTORE_API_KEY_ID}"
-# AUTH_ISSUER_ID="${APPSTORE_ISSUER_ID}"
-AUTH_KEY_ID=QJNA476PS9
-AUTH_ISSUER_ID=69a6de80-81b6-47e3-e053-5b8c7c11a4d1
-AUTH_KEY_PATH="$PROJECT_DIR/AuthKey_${AUTH_KEY_ID}.p8"
-
-echo "AUTH_KEY_ID: $AUTH_KEY_ID"
-echo "AUTH_ISSUER_ID: $AUTH_ISSUER_ID"
-echo "AUTH_KEY_PATH: $AUTH_KEY_PATH"
-
-# ------------------------------------------
-# Create API key from secret
-# ------------------------------------------
-# echo "🔑 Setting up API key..."
-# echo "${APPSTORE_API_PRIVATE_KEY}" > "$AUTH_KEY_PATH"
+AUTH_KEY_ID="${APPSTORE_API_KEY_ID:?APPSTORE_API_KEY_ID is required}"
+AUTH_ISSUER_ID="${APPSTORE_ISSUER_ID:?APPSTORE_ISSUER_ID is required}"
+AUTH_KEY_PATH="${AUTH_KEY_PATH:?AUTH_KEY_PATH is required}"
+BUILD_NUMBER="${GITHUB_RUN_NUMBER:?GITHUB_RUN_NUMBER is required}.${GITHUB_RUN_ATTEMPT:?GITHUB_RUN_ATTEMPT is required}"
+test -s "$AUTH_KEY_PATH" || { echo "❌ App Store Connect API key is missing"; exit 1; }
 
 # ------------------------------------------
 # Create export directory
@@ -41,7 +31,7 @@ echo "Available code signing identities:"
 security find-identity -p codesigning || true
 
 # Show what Release will use for each target
-for T in "Switchbot" "Switchbot WatchKit App" "Switchbot WatchKit Extension"; do
+for T in "Switchbot" "Switchbot WatchKit App"; do
   echo "----- $T (Release) -----"
   xcodebuild -showBuildSettings -project Switchbot.xcodeproj -target "$T" -configuration Release \
   | egrep 'CODE_SIGN_STYLE|CODE_SIGN_IDENTITY|DEVELOPMENT_TEAM|PROVISIONING_PROFILE_SPECIFIER' 2>&1 | tee -a "$LOG_PATH"
@@ -62,6 +52,7 @@ xcodebuild -project "$IOS_DIR/Switchbot.xcodeproj" \
            -authenticationKeyIssuerID "$AUTH_ISSUER_ID" \
            -authenticationKeyPath "$AUTH_KEY_PATH" \
            -allowProvisioningUpdates \
+           CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
            clean archive 2>&1 | tee -a "$LOG_PATH"
 
 if [ ${PIPESTATUS[0]} -ne 0 ]; then
@@ -89,6 +80,3 @@ else
   echo "❌ Upload failed. Check $LOG_PATH for details."
   exit 1
 fi
-
-# Cleanup
-rm -f "$AUTH_KEY_PATH"
